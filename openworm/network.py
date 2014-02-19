@@ -21,7 +21,7 @@ try:
 except:
     from urllib.request import urlopen # Python 3
 
-import PyOpenWorm
+from neuron import Neuron
 import networkx as nx
 import csv
 
@@ -40,9 +40,9 @@ class Network:
 			
 		:param name: Name of a c. elegans neuron
 		:returns: Corresponding neuron to the name given
-		:rtype: PyOpenWorm.Neuron
+		:rtype: Neuron
 		"""
-		return PyOpenWorm.Neuron(name)
+		return Neuron(name)
 
 	def neurons(self):
 		"""

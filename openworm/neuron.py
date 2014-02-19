@@ -230,7 +230,7 @@ class Neuron:
 		   
 		   Example::
 		   
-		       >>>aval = PyOpenWorm.Neuron('AVAL')
+		       >>>aval = Neuron('AVAL')
 		       >>>aval.receptors()
  			   ['GLR-1', 'NMR-1', 'GLR-4', 'GLR-2', 'GGR-3', 'UNC-8', 'GLR-5', 'NMR-2']
  			   #look up what reference says this neuron has a receptor GLR-1
@@ -262,7 +262,7 @@ class Neuron:
 		   :param type: What kind of junction to look for.  
 		                0=all, 1=gap junctions only, 2=all chemical synapses
 		                3=incoming chemical synapses, 4=outgoing chemical synapses
-		   :returns: a list of PyOpenWorm.Connection objects
+		   :returns: a list of Connection objects
 		   :rtype: List
 		   """
 	
