@@ -21,7 +21,7 @@ try:
 except:
     from urllib.request import urlopen # Python 3
 
-from neuron import Neuron
+from .neuron import Neuron
 import networkx as nx
 import csv
 

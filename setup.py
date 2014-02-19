@@ -8,11 +8,9 @@ with open('requirements.txt') as f:
 long_description = open("README.md").read()
 
 setup(
-    #data_files=[("",['neuroml/test/Purk2M9s.nml'])],
-    install_requires=required,
     name = "PyOpenWorm",
-    version = '0.0.1',
-    packages = ['openworm', 'tests'],
+    version = '0.0.2',
+    packages = ['openworm'],
     #package_data = {'neuroml.test': ['*.nml']},
     author = "OpenWorm.org authors and contributors",
     author_email = "info@openworm.org",
