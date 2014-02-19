@@ -9,9 +9,18 @@
 import sqlite3
 from rdflib import Graph
 from rdflib import Namespace
-from rdflib.namespace import RDF, RDFS
 from rdflib import URIRef, BNode, Literal
-import urllib, urllib2
+
+try:
+    from rdflib.namespace import RDF, RDFS
+except:
+    from rdflib import RDF, RDFS
+    
+try:
+    from urllib2 import urlopen  # Python 2
+except:
+    from urllib.request import urlopen # Python 3
+
 import PyOpenWorm
 import networkx as nx
 import csv
@@ -93,7 +102,7 @@ class Network:
 		self.worm = nx.DiGraph()
 		
 		# Neuron table
-		csvfile = urllib2.urlopen('https://raw.github.com/openworm/data-viz/master/HivePlots/neurons.csv')
+		csvfile = urlopen('https://raw.github.com/openworm/data-viz/master/HivePlots/neurons.csv')
 		
 		reader = csv.reader(csvfile, delimiter=';', quotechar='|')
 		for row in reader:
@@ -112,7 +121,7 @@ class Network:
 				self.worm.add_node(row[0], ntype = neurontype)
 		
 		# Connectome table
-		csvfile = urllib2.urlopen('https://raw.github.com/openworm/data-viz/master/HivePlots/connectome.csv')
+		csvfile = urlopen('https://raw.github.com/openworm/data-viz/master/HivePlots/connectome.csv')
 		
 		reader = csv.reader(csvfile, delimiter=';', quotechar='|')
 		for row in reader:
