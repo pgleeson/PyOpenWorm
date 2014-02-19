@@ -12,7 +12,7 @@ setup(
     install_requires=required,
     name = "PyOpenWorm",
     version = '0.0.1',
-    packages = ['PyOpenWorm', 'tests'],
+    packages = ['openworm', 'tests'],
     #package_data = {'neuroml.test': ['*.nml']},
     author = "OpenWorm.org authors and contributors",
     author_email = "info@openworm.org",
